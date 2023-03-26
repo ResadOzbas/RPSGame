@@ -1,7 +1,5 @@
-const prompt = require("prompt-sync")();
-
-let compArray = ['rock','paper','scissors: '];
-let playerChoice = prompt("Rock, Paper or Scissors?")
+let compArray = ['rock','paper','scissors'];
+let playerChoice = prompt("Rock, Paper or Scissors?").toLowerCase
 
 function getComputerChoice(array){
     return array[Math.floor(Math.random() * array.length)];

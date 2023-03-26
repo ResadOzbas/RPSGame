@@ -1,0 +1,22 @@
+{
+  "name": "rpsgame",
+  "version": "1.0.0",
+  "description": "Rock Paper Scissors",
+  "main": "javascript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ResadOzbas/RPSGame.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ResadOzbas/RPSGame/issues"
+  },
+  "homepage": "https://github.com/ResadOzbas/RPSGame#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
