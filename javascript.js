@@ -1,7 +1,11 @@
 
 /*
-let compArray = ['rock','paper','scissors'];
+playRound(getComputerChoice,playerChoice);
+*/
 
+let compArray = ['rock','paper','scissors'];
+let myScore = 0;
+let oppScore = 0;
 
 function getComputerChoice(array){
     return array[Math.floor(Math.random() * array.length)];
@@ -10,21 +14,31 @@ function getComputerChoice(array){
 
 function playRound(getComputerChoice,playerChoice){
     if (getComputerChoice(compArray) == playerChoice){
-        console.log('Draw!')
-    } else if((getComputerChoice=='rock' & playerChoice == 'paper')||(getComputerChoice=='paper' & playerChoice == 'scissors')||(getComputerChoice=='scissors' & playerChoice == 'rock') ){
-        console.log('you win!');
+        return 'Draw!';
+    } else if((getComputerChoice(compArray)=='rock' & playerChoice == 'paper')||(getComputerChoice(compArray)=='paper' & playerChoice == 'scissors')||(getComputerChoice(compArray)=='scissors' & playerChoice == 'rock') ){
+        return 'you win!';
     } else{
-        console.log('you lose!')
+        return 'you lose!';
     }
 }
 
-playRound(getComputerChoice,playerChoice);
-*/
 document.addEventListener('DOMContentLoaded', function() {
-    const button = document.querySelector(".rock");
+    const buttons = document.querySelectorAll("button");
     const result = document.querySelector(".result");
+    const playerScore = document.querySelector(".player");
+    const compScore = document.querySelector(".comp");
   
-    button.addEventListener('click', function(){
-      result.textContent = button.className;
-    });
+    buttons.forEach(button => button.addEventListener('click', function(){
+      result.textContent = playRound(getComputerChoice,button.className);
+    
+      if (result.textContent == 'you win!'){
+        myScore += 1;
+      }else if(result.textContent == 'you lose!'){
+        oppScore += 1;
+      }else{
+        
+      }
+      playerScore.textContent = myScore;
+      compScore.textContent = oppScore;
+    }))
   });
