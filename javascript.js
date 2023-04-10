@@ -1,7 +1,7 @@
-const prompt = require("prompt-sync")();
 
-let compArray = ['rock','paper','scissors: '];
-let playerChoice = prompt("Rock, Paper or Scissors?")
+/*
+let compArray = ['rock','paper','scissors'];
+
 
 function getComputerChoice(array){
     return array[Math.floor(Math.random() * array.length)];
@@ -19,3 +19,12 @@ function playRound(getComputerChoice,playerChoice){
 }
 
 playRound(getComputerChoice,playerChoice);
+*/
+document.addEventListener('DOMContentLoaded', function() {
+    const button = document.querySelector(".rock");
+    const result = document.querySelector(".result");
+  
+    button.addEventListener('click', function(){
+      result.textContent = button.className;
+    });
+  });

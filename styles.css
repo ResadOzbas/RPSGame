@@ -1,0 +1,60 @@
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+body{
+    background-color: black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.title{
+    font-size: 60px;
+    /*font-family: "Comic Sans MS", "Comic Sans", cursive;*/
+    margin:60px;
+    color: white;
+}
+
+.rock{
+    background-image: url('https://static.thenounproject.com/png/477918-200.png');
+    
+}
+
+.paper{
+    background-image: url('https://static.thenounproject.com/png/477912-200.png');
+}
+
+.scissors{
+    background-image: url('https://static.thenounproject.com/png/477919-200.png');
+}
+
+button{
+    background-size: 100px 100px;
+    height: 105px;
+    width: 105px;
+    border-radius: 20px;
+}
+
+.buttons{
+    gap: 80px;
+}
+
+.game{
+    color: white;
+    align-items: center;
+}
+
+.score{
+    font-size: 50px;
+    gap: 100px;
+    margin-bottom: 20px;
+}
+
+.result{
+    font-size: 40px;
+    margin-top: 20px;
+}
